@@ -3,7 +3,7 @@ class Constants {
   static double borderSize = 2;
 
   static double imageSize = 300;
-  static int writingImageSize = 64;
+  static int writingImageSize = 48;
 
   static double strokeWidth = 4;
 }
