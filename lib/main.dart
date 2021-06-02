@@ -13,14 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Japanese Handwriting Recognizer',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          color: Colors.black,
-        ),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.teal,
-        ),
-      ),
+      theme: ThemeData.dark(),
       home: DrawScreen(),
     );
   }

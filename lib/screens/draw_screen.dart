@@ -46,39 +46,42 @@ class _DrawScreenState extends State<DrawScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          'ETL database of handwritten Japanese',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          'Your written text has been size-normalized and centered in a fixed-size images (64 x 64)',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                _mnistPreviewImage(),
-              ],
-            ),
+            // Row(
+            //   children: <Widget>[
+            //     Expanded(
+            //       child: Padding(
+            //         padding: const EdgeInsets.all(8.0),
+            //         child: Column(
+            //           children: <Widget>[
+            //             // Text(
+            //             //   'ETL database of handwritten Japanese',
+            //             //   style: TextStyle(
+            //             //     color: Colors.black,
+            //             //     fontWeight: FontWeight.bold,
+            //             //   ),
+            //             // ),
+            //             // Text(
+            //             //   'Your written text has been size-normalized and centered in a fixed-size images (64 x 64)',
+            //             //   style: TextStyle(
+            //             //     color: Colors.black,
+            //             //   ),
+            //             // )
+            //           ],
+            //         ),
+            //       ),
+            //     ),
+            //     // _mnistPreviewImage(),
+            //   ],
+            // ),
+            // SizedBox(
+            //   height: 5,
+            // ),
             SizedBox(
-              height: 5,
+              height: 25,
             ),
             _drawCanvasWidget(),
             SizedBox(
-              height: 5,
+              height: 25,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,8 +92,8 @@ class _DrawScreenState extends State<DrawScreen> {
                     ? Column(
                         children: [
                           Text(
-                            "Dataset 879",
-                            style: TextStyle(color: Colors.blue),
+                            "Prediction Result",
+                            style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold, fontSize: 36),
                           ),
                           PredictionWidget(
                             predictions: _prediction,
@@ -135,8 +138,9 @@ class _DrawScreenState extends State<DrawScreen> {
       width: Constants.canvasSize + Constants.borderSize * 2,
       height: Constants.canvasSize + Constants.borderSize * 2,
       decoration: BoxDecoration(
+        color: Colors.white,
         border: Border.all(
-          color: Colors.black,
+          color: Colors.white,
           width: Constants.borderSize,
         ),
       ),
