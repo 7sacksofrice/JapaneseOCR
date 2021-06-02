@@ -24,8 +24,8 @@ class _DrawScreenState extends State<DrawScreen> {
   bool firstModelPredictionHasFinished = true;
   final modelFilePath1 = "assets/model806.tflite";
   final labelFilePath1 = "assets/label806.txt";
-  final modelFilePath2 = "assets/model3036.tflite";
-  final labelFilePath2 = "assets/label3036.txt";
+  // final modelFilePath2 = "assets/model3036.tflite";
+  // final labelFilePath2 = "assets/label3036.txt";
   static List<Kanji> allKanji = [];
   var test1 = [];
   var test2 = [];
@@ -159,8 +159,8 @@ class _DrawScreenState extends State<DrawScreen> {
         onPanEnd: (DragEndDetails details) async {
           _points.add(null);
           await _recognize();
-          await _initModel(
-              modelFilePath: modelFilePath2, labelFilePath: labelFilePath2);
+          // await _initModel(
+          //     modelFilePath: modelFilePath2, labelFilePath: labelFilePath2);
 
           await _recognize(isForSecondModel: true);
           await _initModel(
